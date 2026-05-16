@@ -51,7 +51,7 @@ export default function Home() {
 
             <div className="relative rounded-[2rem] border border-white/20 bg-white/10 p-6 shadow-2xl shadow-slate-950/10 backdrop-blur-sm sm:p-8">
               {/* صورة بطل الصفحة */}
-              <div className="flex h-full min-h-[22rem] items-center justify-center rounded-[1.75rem] border border-dashed border-white/40 bg-white/10 overflow-hidden">
+              <div className="flex h-full min-h-[22rem] items-center justify-center rounded-[1.75rem] overflow-hidden">
                 <img
                   src="/download.jpeg"
                   alt="صورة توضيحية"
