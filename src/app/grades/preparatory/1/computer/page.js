@@ -4,13 +4,13 @@ import { computerUnits } from "./content";
 
 export default function ComputerHub() {
   return (
-    <main className="min-h-screen bg-[#f4f8ff] px-6 py-10 sm:px-10">
+    <main dir="rtl" className="min-h-screen bg-[#f4f8ff] px-6 py-10 sm:px-10">
       <div className="mx-auto grid max-w-7xl gap-8 xl:grid-cols-[1.2fr_0.8fr]">
         <section className="space-y-8 rounded-[2rem] border border-slate-200 bg-white p-10 shadow-lg shadow-slate-200/60">
           <div className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#0f3b79]">Computer</p>
-            <h1 className="text-4xl font-semibold tracking-tight text-[#102d55]">Preparatory Grade 1 — Computer</h1>
-            <p className="max-w-2xl text-lg leading-8 text-slate-600">A gentle Computer course for Grade 1 with simple lessons and safety tips. Upload your content to replace placeholders.</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#0f3b79] text-right">الحاسب الآلي</p>
+            <h1 className="text-4xl font-semibold tracking-tight text-[#102d55] text-right">الحاسب الآلي - الصف الأول الإعدادي</h1>
+            <p className="max-w-2xl text-lg leading-8 text-slate-600 text-right">دورة حاسب آلي لطيفة للصف الأول الإعدادي مع دروس بسيطة ونصائح الأمان. قم بتحميل المحتوى الخاص بك لاستبدال العناصر النائبة.</p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
@@ -18,9 +18,9 @@ export default function ComputerHub() {
               <Link
                 key={unit.id}
                 href={`/grades/preparatory/1/computer/${unit.id}`}
-                className="rounded-[1.5rem] border border-slate-200 bg-white p-6 transition hover:border-[#4dadeb] hover:bg-[#eef6ff]"
+                className="rounded-[1.5rem] border border-slate-200 bg-white p-6 transition hover:border-[#4dadeb] hover:bg-[#eef6ff] text-right"
               >
-                <p className="text-sm font-semibold text-[#0f3b79]">{unit.id.replace("unit-", "Unit ")}</p>
+                <p className="text-sm font-semibold text-[#0f3b79]">{unit.id.replace("unit-", "الوحدة ")}</p>
                 <h3 className="mt-3 text-2xl font-semibold text-[#102d55]">{unit.title}</h3>
                 <p className="mt-3 text-slate-600">{unit.subtitle}</p>
               </Link>
@@ -28,8 +28,8 @@ export default function ComputerHub() {
           </div>
 
           <div className="rounded-[1.75rem] border border-[#4dadeb] bg-[#e8f2ff] p-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#0f3b79]">Course notes</p>
-            <p className="mt-3 text-slate-700">This is a scaffold. Add your lesson explanations and exam pages by uploading content into the lesson routes.</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#0f3b79] text-right">ملاحظات الدورة</p>
+            <p className="mt-3 text-slate-700 text-right">هذا عبارة عن سقالة. أضف شروحات الدرس وصفحات الاختبار من خلال تحميل المحتوى في مسارات الدرس.</p>
           </div>
         </section>
 

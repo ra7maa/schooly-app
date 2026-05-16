@@ -19,12 +19,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  direction: rtl;
+  text-align: right;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  direction: rtl !important;
+  text-align: right;
 }
 
 * {
@@ -36,4 +43,165 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+/* RTL Support for Arabic Content - GLOBAL */
+html,
+body {
+  direction: rtl !important;
+  text-align: right;
+}
+
+/* Force all content to RTL */
+* {
+  direction: rtl !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, span, div, li, a,
+button, input, textarea, select {
+  text-align: right;
+  direction: rtl !important;
+}
+
+/* RTL Lists */
+ul, ol {
+  padding-right: 1.25rem !important;
+  padding-left: 0 !important;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: right;
+}
+
+ul li, ol li {
+  text-align: right;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+ul li::marker, ol li::marker {
+  text-align: right;
+}
+
+/* RTL Grid Layout - Reverse column order */
+.xl\:grid-cols-\[1\.2fr_0\.8fr\] {
+  grid-template-columns: 0.8fr 1.2fr !important;
+}
+
+.grid {
+  direction: rtl !important;
+}
+
+/* RTL Flex Direction */
+.flex, .flex-col {
+  direction: rtl !important;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* RTL Padding/Margin Conversions - Tailwind utilities */
+.pl-5, [class*="pl-"] {
+  padding-left: 0 !important;
+}
+
+.pr-5, [class*="pr-"] {
+  padding-right: 0 !important;
+}
+
+.ml-5, [class*="ml-"] {
+  margin-left: 0 !important;
+}
+
+.mr-5, [class*="mr-"] {
+  margin-right: 0 !important;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* RTL Text Utilities */
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: right !important;
+}
+
+/* RTL Button Styling */
+button {
+  text-align: center;
+  direction: rtl !important;
+}
+
+/* RTL Links */
+a {
+  direction: rtl !important;
+  text-align: right;
+}
+
+/* RTL Grid Items */
+.sm\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xl\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Additional RTL rules for specific elements */
+section {
+  direction: rtl !important;
+  text-align: right;
+}
+
+main {
+  direction: rtl !important;
+}
+
+nav {
+  direction: rtl !important;
+}
+
+header {
+  direction: rtl !important;
+}
+
+footer {
+  direction: rtl !important;
+  text-align: right;
 }
